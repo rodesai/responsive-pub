@@ -104,8 +104,8 @@ jobs:
 
       - name: Create Next Version Commit
         run: |
-          git config --global user.name 'Responsive Tools'
-          git config --global user.email 'tools@responsive.dev'
+          git config --global user.name 'Rohan Desai'
+          git config --global user.email 'desai.p.rohan@gmail.com'
           ./gradlew :${{ inputs.module }}:markNextVersion \
             -Prelease.incrementer=${{ inputs.increment }} \
             -Prelease.dryRun | grep "Creating" | git commit --allow-empty -F -
@@ -114,8 +114,8 @@ jobs:
       - name: Push next platform version to Sindri
         working-directory: sindri
         run: |
-          git config --global user.name 'Responsive Tools'
-          git config --global user.email 'tools@responsive.dev'
+          git config --global user.name 'Rohan Desai'
+          git config --global user.email 'desai.p.rohan@gmail.com'
           git commit -am "update responsive-pub artifact versions"
           git push
 
