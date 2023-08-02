@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+// blablabla
 public class PropertiesFileLoginModule implements LoginModule {
   private static final Logger LOG = LoggerFactory.getLogger(PropertiesFileLoginModule.class);
 

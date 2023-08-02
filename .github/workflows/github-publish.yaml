@@ -124,7 +124,7 @@ jobs:
         run: |
           git config --global user.name 'Rohan Desai'
           git config --global user.email 'desai.p.rohan@gmail.com'
-          git commit -am "update responsive-pub artifact versions"
+          git commit --allow-empty -am "update responsive-pub artifact versions"
           git push
 
       - name: Increment Version
