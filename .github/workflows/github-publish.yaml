@@ -76,7 +76,8 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
 
       - name: Set Operator Version
-        run: echo "OPERATOR_VERSION=$(./gradlew operator:cV | grep Project.version | sed 's/Project version: //')" >> $GITHUB_ENV
+        run: |
+          echo "OPERATOR_VERSION=$(./gradlew operator:cV | grep Project.version | sed 's/Project version: //')" >> $GITHUB_ENV
 
       - name: Run Smoke Test (Operator)
         working-directory: sindri
