@@ -49,7 +49,7 @@ jobs:
       - name: Release
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: :${{ inputs.module }}:release
+          arguments: :${{ inputs.module }}:release --info
 
       - name: Publish Images
         uses: gradle/gradle-build-action@v2
