@@ -71,6 +71,13 @@ jobs:
         with:
             install_only: true
 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: arn:aws:iam::292505934682:role/github-responsive-pub-main
+          role-session-name: github-publish-artifacts
+          aws-region: us-west-2
+
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
