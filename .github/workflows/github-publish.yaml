@@ -63,7 +63,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
         if: ${{ inputs.module == 'kafka-client' }}
         with:
-          arguments: kafka-client:tagDocker -PdockerRegistry=${{ steps.login-ecr-public.outputs.registry }}/j8q9y0n6 -PhelmRegistry=${{ steps.login-ecr-public.outputs.registry }}/j8q9y0n6
+          arguments: kafka-client-examples:simple-example:tagDocker -PdockerRegistry=${{ steps.login-ecr-public.outputs.registry }}/j8q9y0n6 -PhelmRegistry=${{ steps.login-ecr-public.outputs.registry }}/j8q9y0n6
         env:
           ECR_REGISTRY: ${{ steps.login-ecr-public.outputs.registry }}
 
