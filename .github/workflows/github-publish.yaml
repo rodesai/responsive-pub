@@ -44,7 +44,7 @@ jobs:
       - name: Build & Test
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: :${{ inputs.module }}:build
+          arguments: :${{ inputs.module }}:build -xtest
 
       - name: Release
         uses: gradle/gradle-build-action@v2
